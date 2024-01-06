@@ -36,7 +36,7 @@ import Score from "./components/Score";
 
 import scores from "./scores";
 
-import PlaybackEngine from "../dist/PlaybackEngine";
+import PlaybackEngine from "osmd-audio-player";
 
 export default {
   name: "app",
