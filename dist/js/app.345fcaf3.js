@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 1545:
+/***/ 4819:
 /***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 
@@ -20,8 +20,8 @@ var vuetify_min = __webpack_require__(6469);
 
 
 vue_runtime_esm["default"].use((vuetify_default()), {});
-;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App.vue?vue&type=template&id=66ce4828
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app',{attrs:{"id":"app"}},[_c('v-navigation-drawer',{attrs:{"app":""},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',[_c('v-list-tile',[_c('v-list-tile-title',{staticClass:"title"},[_vm._v(" Playback settings ")])],1),(_vm.pbEngineReady)?_c('PlaybackSidebar',{attrs:{"playbackEngine":_vm.pbEngine}}):_vm._e()],1)],1),_c('v-toolbar',{attrs:{"app":""}},[_c('v-toolbar-side-icon',{on:{"click":function($event){_vm.drawer = !_vm.drawer}}})],1),_c('v-content',[_c('v-container',{attrs:{"fluid":""}},[_c('v-select',{attrs:{"items":_vm.scores,"label":"Select Score"},on:{"change":_vm.scoreChanged}}),(_vm.mounted)?_c('Score',{attrs:{"score":_vm.selectedScore,"ready":_vm.pbEngineReady},on:{"osmdInit":_vm.osmdInit,"scoreLoaded":_vm.scoreLoaded}}):_vm._e()],1),_c('PlaybackControls',{attrs:{"playbackEngine":_vm.pbEngine,"scoreTitle":_vm.scoreTitle}})],1)],1)}
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App.vue?vue&type=template&id=153b7fd7
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app',{attrs:{"id":"app"}},[_c('v-navigation-drawer',{attrs:{"app":""},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',[_c('v-list-tile',[_c('v-list-tile-title',{staticClass:"title"},[_vm._v(" Playback settings ")])],1),(_vm.pbEngineReady)?_c('PlaybackSidebar',{attrs:{"playbackEngine":_vm.pbEngine}}):_vm._e()],1)],1),_c('v-toolbar',{attrs:{"app":""}},[_c('v-toolbar-side-icon',{on:{"click":function($event){_vm.drawer = !_vm.drawer}}})],1),_c('v-content',[_c('v-container',[_c('v-select',{attrs:{"items":_vm.scores,"label":"Selecciona partitura"},on:{"change":_vm.scoreChanged}}),(_vm.mounted)?_c('Score',{attrs:{"score":_vm.selectedScore,"ready":_vm.pbEngineReady},on:{"osmdInit":_vm.osmdInit,"scoreLoaded":_vm.scoreLoaded}}):_vm._e()],1),_c('PlaybackControls',{attrs:{"playbackEngine":_vm.pbEngine,"scoreTitle":_vm.scoreTitle}})],1)],1)}
 var staticRenderFns = []
 
 
@@ -358,9 +358,9 @@ var PlaybackControls_component = (0,componentNormalizer/* default */.Z)(
 )
 
 /* harmony default export */ var PlaybackControls = (PlaybackControls_component.exports);
-;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Score.vue?vue&type=template&id=1dc2239e&scoped=true
-var Scorevue_type_template_id_1dc2239e_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.scoreLoading || !_vm.ready)?_c('div',{staticClass:"score-progress"},[_c('v-progress-circular',{attrs:{"size":60,"color":"primary","indeterminate":""}})],1):_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.scoreLoading),expression:"!scoreLoading"}],ref:"scorediv",staticClass:"score",style:({opacity: _vm.ready ? 100 : 0})})])}
-var Scorevue_type_template_id_1dc2239e_scoped_true_staticRenderFns = []
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Score.vue?vue&type=template&id=6a30f40b&scoped=true
+var Scorevue_type_template_id_6a30f40b_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.scoreLoading || !_vm.ready)?_c('div',{staticClass:"score-progress"},[_c('v-progress-circular',{attrs:{"size":60,"color":"primary","indeterminate":""}})],1):_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.scoreLoading),expression:"!scoreLoading"}],ref:"scorediv",staticClass:"score",style:({opacity: _vm.ready ? 100 : 0})})])}
+var Scorevue_type_template_id_6a30f40b_scoped_true_staticRenderFns = []
 
 
 // EXTERNAL MODULE: ./node_modules/axios/index.js
@@ -381,12 +381,52 @@ var opensheetmusicdisplay_min = __webpack_require__(6022);
 
 
 
+async function fetchData(path) {
+  try {
+    let xmlData;
+
+    // Check if the path is a URL
+    if (path.startsWith('http')) {
+      // Fetch data from URL using Axios
+      const response = await axios_default().get(path);
+      xmlData = response.data;
+    } else {
+      // Read local file using FileReader API
+      xmlData = await readLocalFile(path);
+    }
+    return xmlData;
+  } catch (error) {
+    console.error('Error fetching XML data:', error);
+    throw error; // You might want to handle or log the error accordingly
+  }
+}
+function readLocalFile(filePath) {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.onload = function (event) {
+      resolve(event.target.result);
+    };
+    fileReader.onerror = function (error) {
+      reject(error);
+    };
+
+    // Read the local file
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      fileReader.readAsText(file);
+    });
+    fileInput.click();
+  });
+}
 /* harmony default export */ var Scorevue_type_script_lang_js = ({
   props: ["score", "ready"],
   data() {
     return {
       osmd: null,
-      scoreLoading: false
+      scoreLoading: false,
+      zoom: 1
     };
   },
   watch: {
@@ -404,13 +444,30 @@ var opensheetmusicdisplay_min = __webpack_require__(6022);
     this.$emit("osmdInit", this.osmd);
     if (this.score) this.loadScore(this.score);
   },
+  computed: {
+    computedZoom() {
+      // Adjust the conditions and calculations based on your specific requirements
+      if (window.innerWidth < 768) {
+        // For screens narrower than 768px
+        return this.zoom * 0.25; // Adjust the scale factor as needed
+      } else {
+        // For larger screens
+        return this.zoom;
+      }
+    }
+  },
   methods: {
     async loadScore(scoreUrl) {
       this.scoreLoading = true;
-      let scoreXml = await axios_default().get(scoreUrl);
-      await this.osmd.load(scoreXml.data);
+      let scoreXml = await fetchData(scoreUrl);
+      await this.osmd.load(scoreXml);
       this.scoreLoading = false;
       await this.$nextTick();
+      if (window.innerWidth < 768) {
+        this.zoom = 0.5;
+      }
+      ;
+      this.osmd.Zoom = this.zoom;
       await this.osmd.render();
       this.$emit("scoreLoaded");
     }
@@ -418,15 +475,15 @@ var opensheetmusicdisplay_min = __webpack_require__(6022);
 });
 ;// CONCATENATED MODULE: ./src/components/Score.vue?vue&type=script&lang=js
  /* harmony default export */ var components_Scorevue_type_script_lang_js = (Scorevue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Score.vue?vue&type=style&index=0&id=1dc2239e&prod&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Score.vue?vue&type=style&index=0&id=6a30f40b&prod&scoped=true&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/Score.vue?vue&type=style&index=0&id=1dc2239e&prod&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./src/components/Score.vue?vue&type=style&index=0&id=6a30f40b&prod&scoped=true&lang=scss
 
-;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Score.vue?vue&type=style&index=1&id=1dc2239e&prod&lang=scss
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Score.vue?vue&type=style&index=1&id=6a30f40b&prod&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/Score.vue?vue&type=style&index=1&id=1dc2239e&prod&lang=scss
+;// CONCATENATED MODULE: ./src/components/Score.vue?vue&type=style&index=1&id=6a30f40b&prod&lang=scss
 
 ;// CONCATENATED MODULE: ./src/components/Score.vue
 
@@ -440,11 +497,11 @@ var opensheetmusicdisplay_min = __webpack_require__(6022);
 
 var Score_component = (0,componentNormalizer/* default */.Z)(
   components_Scorevue_type_script_lang_js,
-  Scorevue_type_template_id_1dc2239e_scoped_true_render,
-  Scorevue_type_template_id_1dc2239e_scoped_true_staticRenderFns,
+  Scorevue_type_template_id_6a30f40b_scoped_true_render,
+  Scorevue_type_template_id_6a30f40b_scoped_true_staticRenderFns,
   false,
   null,
-  "1dc2239e",
+  "6a30f40b",
   null
   
 )
@@ -574,15 +631,15 @@ var dist = __webpack_require__(5072);
       // OSMD cursor img element gets detached from the DOM and doesn't show unless 
       // you refresh the page. A less pretty workaround until root cause is determined
       this.mounted = true;
-    }, 200);
+    }, 10);
   }
 });
 ;// CONCATENATED MODULE: ./src/App.vue?vue&type=script&lang=js
  /* harmony default export */ var src_Appvue_type_script_lang_js = (Appvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App.vue?vue&type=style&index=0&id=66ce4828&prod&lang=scss
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App.vue?vue&type=style&index=0&id=153b7fd7&prod&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/App.vue?vue&type=style&index=0&id=66ce4828&prod&lang=scss
+;// CONCATENATED MODULE: ./src/App.vue?vue&type=style&index=0&id=153b7fd7&prod&lang=scss
 
 ;// CONCATENATED MODULE: ./src/App.vue
 
@@ -796,7 +853,7 @@ new vue_runtime_esm["default"]({
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [998], function() { return __webpack_require__(1545); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [998], function() { return __webpack_require__(4819); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
