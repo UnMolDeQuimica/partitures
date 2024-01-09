@@ -1,5 +1,9 @@
 export default [
   {
+    value: "https://unmoldequimica.github.io/partitures/demo/Happy%20Xmas%20(War%20Is%20Over).musicxml",
+    text: "Happy XMas (War Is Over)"
+  },
+  {
     value: "https://opensheetmusicdisplay.github.io/demo/Beethoven_AnDieFerneGeliebte.xml",
     text: "Beethoven, L.v. - An die ferne Geliebte"
   },

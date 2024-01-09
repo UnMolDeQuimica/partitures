@@ -64,7 +64,7 @@ export default {
       console.log("OSMD init");
       this.osmd = osmd;
       this.selectedScore =
-        "https://opensheetmusicdisplay.github.io/demo/MuzioClementi_SonatinaOpus36No3_Part1.xml";
+        "https://unmoldequimica.github.io/partitures/demo/Happy%20Xmas%20(War%20Is%20Over).musicxml";
     },
     async scoreLoaded() {
       console.log("Score loaded");
