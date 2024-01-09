@@ -16,7 +16,8 @@ export default {
   data() {
     return {
       osmd: null,
-      scoreLoading: false
+      scoreLoading: false,
+      zoom: 1,
     };
   },
   watch: {
@@ -34,6 +35,18 @@ export default {
     this.$emit("osmdInit", this.osmd);
     if (this.score) this.loadScore(this.score);
   },
+  computed: {
+    computedZoom() {
+      // Adjust the conditions and calculations based on your specific requirements
+      if (window.innerWidth < 768) {
+        // For screens narrower than 768px
+        return this.zoom * 0.25; // Adjust the scale factor as needed
+      } else {
+        // For larger screens
+        return this.zoom;
+      }
+    },
+  },
   methods: {
     async loadScore(scoreUrl) {
       this.scoreLoading = true;
@@ -41,6 +54,11 @@ export default {
       await this.osmd.load(scoreXml.data);
       this.scoreLoading = false;
       await this.$nextTick();
+      console.log(this.zoom);
+      if (window.innerWidth < 768) {
+        this.zoom = 0.5
+      };
+      this.osmd.Zoom = this.zoom;
       await this.osmd.render();
       this.$emit("scoreLoaded");
     }

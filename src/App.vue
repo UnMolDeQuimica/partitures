@@ -14,9 +14,9 @@
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
     <v-content>
-      <v-container fluid>
-        <v-select :items="scores" label="Select Score" @change="scoreChanged" />
-        <Score
+      <v-container>
+        <v-select :items="scores" label="Selecciona partitura" @change="scoreChanged" />
+        <Score 
           v-if="mounted"
           @osmdInit="osmdInit"
           @scoreLoaded="scoreLoaded"
