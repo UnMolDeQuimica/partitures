@@ -11,6 +11,50 @@
 import axios from "axios";
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 
+async function fetchData(path) {
+  try {
+    let xmlData;
+
+    // Check if the path is a URL
+    if (path.startsWith('http')) {
+      // Fetch data from URL using Axios
+      const response = await axios.get(path);
+      xmlData = response.data;
+    } else {
+      // Read local file using FileReader API
+      xmlData = await readLocalFile(path);
+    }
+    return xmlData;
+  } catch (error) {
+    console.error('Error fetching XML data:', error);
+    throw error; // You might want to handle or log the error accordingly
+  }
+}
+
+function readLocalFile(filePath) {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+
+    fileReader.onload = function (event) {
+      resolve(event.target.result);
+    };
+
+    fileReader.onerror = function (error) {
+      reject(error);
+    };
+
+    // Read the local file
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      fileReader.readAsText(file);
+    });
+
+    fileInput.click();
+  });
+}
+
 export default {
   props: ["score", "ready"],
   data() {
@@ -50,11 +94,10 @@ export default {
   methods: {
     async loadScore(scoreUrl) {
       this.scoreLoading = true;
-      let scoreXml = await axios.get(scoreUrl);
-      await this.osmd.load(scoreXml.data);
+      let scoreXml = await fetchData(scoreUrl);
+      await this.osmd.load(scoreXml);
       this.scoreLoading = false;
       await this.$nextTick();
-      console.log(this.zoom);
       if (window.innerWidth < 768) {
         this.zoom = 0.5
       };

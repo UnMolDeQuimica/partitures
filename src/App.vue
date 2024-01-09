@@ -85,7 +85,7 @@ export default {
       // OSMD cursor img element gets detached from the DOM and doesn't show unless 
       // you refresh the page. A less pretty workaround until root cause is determined
       this.mounted = true;
-    }, 200)
+    }, 10)
   }
 };
 </script>
