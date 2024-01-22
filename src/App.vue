@@ -64,7 +64,7 @@ export default {
       console.log("OSMD init");
       this.osmd = osmd;
       this.selectedScore =
-        "https://unmoldequimica.github.io/partitures/demo/Happy%20Xmas%20(War%20Is%20Over).musicxml";
+        "https://raw.githubusercontent.com/UnMolDeQuimica/partitures-source/main/assets/ay-linda-amiga.musicxml";
     },
     async scoreLoaded() {
       console.log("Score loaded");

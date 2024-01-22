@@ -1,6 +1,14 @@
 export default [
   {
-    value: "https://unmoldequimica.github.io/partitures/demo/Happy%20Xmas%20(War%20Is%20Over).musicxml",
+    value: "https://raw.githubusercontent.com/UnMolDeQuimica/partitures-source/main/assets/ay-linda-amiga.musicxml",
+    text: "Ay, linda amiga"
+  },
+  {
+    value: "https://raw.githubusercontent.com/UnMolDeQuimica/partitures-source/main/assets/lamo-de-son-carabassa.musicxml",
+    text: "L'Amo de Son Carabassa (sense lletra)"
+  },
+  {
+    value: "https://raw.githubusercontent.com/UnMolDeQuimica/partitures-source/main/assets/happy-x-mas-war-is-over.musicxml",
     text: "Happy XMas (War Is Over)"
   },
   {
